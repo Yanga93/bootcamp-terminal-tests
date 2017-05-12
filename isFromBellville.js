@@ -1,7 +1,7 @@
-const assert = require('assert');
-var isFromBellville = function(regNum){
+//const assert = require('assert');
+module.exports = function(regNum){
   var location = regNum.startsWith('CY');
-      console.log(location);
+      // console.log(location);
         return location;
 }
-  assert.equal(isFromBellville('CY'), true);
+  //assert.equal(isFromBellville('CY'), true);
