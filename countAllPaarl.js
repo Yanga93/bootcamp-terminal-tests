@@ -1,22 +1,12 @@
-const assert = require('assert');
-var fromWhere = function(regNum){
+module.exports = function(regList) {
+  var regNum = regList.split(", ");
 
- switch(regNum.substring(0,2)){
- case 'CY':
-   return 'Bellville';
-     break;
+  var countPaarl = [];
+  for (var i = 0; i < regNum.length; i++) {
 
- case 'CJ':
-   return 'Paarl';
-     break;
-
- case 'CA':
-   return 'Cape Town';
-     break;
-
- default:
-       return 'Some other place!';
-   }
- };
- //console.log(fromWhere('GP 2536'));
-   assert.equal(fromWhere('CJ'), 'Paarl');
+    if (regNum[i].startsWith('CJ')) {
+      countPaarl.push(regNum[i]);
+    }
+  }
+  return countPaarl.length;
+};

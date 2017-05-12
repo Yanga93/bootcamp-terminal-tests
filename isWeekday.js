@@ -1,7 +1,4 @@
-const assert = require('assert');
-var isWeekday = function(day){
+module.exports = function(day) {
   var myWeekDay = !day.startsWith('S');
-     console.log(myWeekDay);
-      return myWeekDay;
+  return myWeekDay;
 };
-assert.equal(isWeekday('S'), true);
