@@ -1,5 +1,4 @@
-const assert = require('assert');
-var transportFee = function(shift){
+module.exports = function(shift){
 if(shift == 'morning'){
     return 'R20';
 
@@ -10,4 +9,3 @@ if(shift == 'morning'){
     return 'R0';
   }
 };
-    assert.equal(transportFee('morning'), 'R20');

@@ -1,5 +1,4 @@
-const assert = require('assert');
-var fromWhere = function(regNum){
+module.exports = function(regNum){
 
  switch(regNum.substring(0,2)){
  case 'CY':
@@ -18,5 +17,3 @@ var fromWhere = function(regNum){
        return 'Some other place!';
    }
  };
- //console.log(fromWhere('GP 2536'));
-   assert.equal(fromWhere('CJ'), 'Paarl');

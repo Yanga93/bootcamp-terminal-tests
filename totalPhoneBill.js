@@ -1,5 +1,4 @@
-const assert = require('assert');
-var totalPhoneBill =  function(phoneBill){
+module.exports =  function(phoneBill){
   var totalBill = phoneBill.split(',');
 
   var total = 0;
@@ -19,9 +18,8 @@ for (var i=0;i<totalBill.length; i++){
   }
 
 }
-    console.log((total).toFixed(2));
+
       return total;
 
 };
-  var result = totalPhoneBill('call,sms,call,sms,sms');
-    assert.equal(result.toFixed(2), 7.45);
+  
